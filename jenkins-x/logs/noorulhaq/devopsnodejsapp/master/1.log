@@ -1,0 +1,110 @@
+Step: build-step-credential-initializer-q46ps:
+
+{"level":"warn","ts":1555732953.3518615,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1555732953.3522167,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: build-step-git-source-*********-devopsnodejsapp-maste-4skzx:
+
+{"level":"warn","ts":1555732954.1752727,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1555732955.2350101,"logger":"fallback-logger","caller":"git-init/main.go:99","msg":"Successfully cloned \"https://github.com/*********/devopsnodejsapp\" @ \"v0.0.1\" in path \"/workspace/source\""}
+Step: build-step-place-tools:
+
+Step: build-step-git-merge:
+
+Warning failed to load version: failed to parse version -dev+9e73adc0b: No Major.Minor.Patch elements found
+time="2019-04-20T04:02:37Z" level=info msg="got "
+Using SHAs from PULL_REFS=master:
+time="2019-04-20T04:02:37Z" level=warning msg="no SHAs to merge, falling back to initial cloned commit"
+Step: build-step-setup-**-git-credentials:
+
+{"level":"info","msg":"Generated Git credentials file /workspace/xdg_config/git/credentials\n","time":"2019-04-20T04:02:38Z"}
+Step: build-step-build-npm-install:
+
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN REPLACE_ME@1.0.0 No repository field.
+npm WARN REPLACE_ME@1.0.0 No license field.
+
+up to date in 0.389s
+found 0 vulnerabilities
+
+Step: build-step-build-npm-test:
+
+
+> REPLACE_ME@1.0.0 test /workspace/source
+> echo "no test specified" && exit 0
+
+no test specified
+Step: build-step-build-container-build:
+
+[36mINFO[0m[0000] Downloading base image node:9-slim           
+ERROR: logging before flag.Parse: E0420 04:02:43.907826       9 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E0420 04:02:43.910645       9 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+2019/04/20 04:02:43 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0002] Error while retrieving image from cache: getting file info: stat /workspace/sha256:0e0175bbe4f8d9d104590d8d2c591017874e30977cb71aaff1cf6fa99479575c: no such file or directory 
+[36mINFO[0m[0002] Downloading base image node:9-slim           
+2019/04/20 04:02:46 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0004] Executing 0 build triggers                   
+[36mINFO[0m[0004] cmd: EXPOSE                                  
+[36mINFO[0m[0004] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0004] Using files from context: [/workspace/source] 
+[36mINFO[0m[0004] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0004] Taking snapshot of full filesystem...        
+[36mINFO[0m[0004] ENV PORT 8080                                
+[36mINFO[0m[0004] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0004] EXPOSE 8080                                  
+[36mINFO[0m[0004] cmd: EXPOSE                                  
+[36mINFO[0m[0004] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0004] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0004] WORKDIR /usr/src/app                         
+[36mINFO[0m[0004] cmd: workdir                                 
+[36mINFO[0m[0004] Changed working directory to /usr/src/app    
+[36mINFO[0m[0004] Creating directory /usr/src/app              
+[36mINFO[0m[0004] Taking snapshot of files...                  
+[36mINFO[0m[0004] Using files from context: [/workspace/source] 
+[36mINFO[0m[0004] COPY . .                                     
+[36mINFO[0m[0004] Taking snapshot of files...                  
+[36mINFO[0m[0004] CMD ["npm", "start"]                         
+[36mINFO[0m[0004] No files changed in this command, skipping snapshotting. 
+2019/04/20 04:02:48 pushed blob: sha256:5619df6b07e9281d3dba5112432cdc1929765910a91d78f2bf8e9fba70699327
+2019/04/20 04:02:48 pushed blob: sha256:fa630e71d7ee85bc52218b762e1b7dd417a92228bb041723ceac9295cb062412
+2019/04/20 04:02:48 pushed blob: sha256:fd09433634e56d66197c6221a472b96e9eb481a320a17fc3f63d4aed65706a84
+2019/04/20 04:02:49 pushed blob: sha256:7d083412657baa2dafba8d093034ef26f9ed2c90fb6ed95f76bb55aff03ed429
+2019/04/20 04:02:49 pushed blob: sha256:5bba3ecb4cd6374a19da45f2a3db0a9c0804984358b3bb4b666c28944016e5ff
+2019/04/20 04:02:49 pushed blob: sha256:196b8e3c919d5639193ba6c6e54774528942041bbc37606631a2250502985c3c
+2019/04/20 04:02:50 pushed blob: sha256:e01bd28a434b56ffd2a3fe9aa99b9b69aecca69904843edd30b1ee7150d79904
+2019/04/20 04:02:54 pushed blob: sha256:a88538b9cd05cfa611e43a25582a95ad7879f6fa708b0386a26b71ee62235bb3
+2019/04/20 04:02:54 10.11.247.124:5000/*********/devopsnodejsapp:0.0.1: digest: sha256:4aa52dc3ca9619c795d4308dab9f6a83269ca793dea35a192eb316b227af2bd4 size: 1404
+Step: build-step-build-post-build:
+
+{"level":"info","msg":"no CVE provider running in the current ** namespace so skip adding image to be analysed","time":"2019-04-20T04:02:55Z"}
+Step: build-step-promote-changelog:
+
+{"level":"info","msg":"Converted /workspace/source/charts/devopsnodejsapp to an unshallow repository\n","time":"2019-04-20T04:02:59Z"}
+{"level":"info","msg":"Generating change log from git ref a04030611c72585c181519a2069b823cdd732ad5 =\u003e 5d01dc9fd76c1863956e7ade580b0ca0fe3226ca\n","time":"2019-04-20T04:02:59Z"}
+{"level":"warning","msg":"Failed to enrich commits with issues: User.jenkins.io \"\" is invalid: metadata.name: Required value: name or generateName is required\n","time":"2019-04-20T04:02:59Z"}
+{"level":"warning","msg":"Failed to enrich commits with issues: User.jenkins.io \"\" is invalid: metadata.name: Required value: name or generateName is required\n","time":"2019-04-20T04:02:59Z"}
+{"level":"info","msg":"Finding issues in commit messages using git format\n","time":"2019-04-20T04:02:59Z"}
+{"level":"warning","msg":"No release found for *********/devopsnodejsapp and tag v0.0.1 so creating a new release\n","time":"2019-04-20T04:03:00Z"}
+{"level":"info","msg":"Updated the release information at https://github.com/*********/devopsnodejsapp/releases/tag/v0.0.1\n","time":"2019-04-20T04:03:01Z"}
+{"level":"info","msg":"generated: /workspace/source/charts/devopsnodejsapp/templates/release.yaml\n","time":"2019-04-20T04:03:01Z"}
+{"level":"info","msg":"Created Release devopsnodejsapp-0-0-1 resource in namespace **\n","time":"2019-04-20T04:03:01Z"}
+{"level":"info","msg":"Updating PipelineActivity *********-devopsnodejsapp-master-1 with version 0.0.1\n","time":"2019-04-20T04:03:01Z"}
+{"level":"info","msg":"Updated PipelineActivities *********-devopsnodejsapp-master-1 with release notes URL: https://github.com/*********/devopsnodejsapp/releases/tag/v0.0.1\n","time":"2019-04-20T04:03:01Z"}
+Step: build-step-promote-helm-release:
+
+{"level":"warning","msg":"No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080\n","time":"2019-04-20T04:03:02Z"}
+{"level":"info","msg":"Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io\n","time":"2019-04-20T04:03:05Z"}
+{"level":"info","msg":"Successfully added Helm repository chartmuseum.jenkins-x.io.\n","time":"2019-04-20T04:03:07Z"}
+{"level":"info","msg":"Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080\n","time":"2019-04-20T04:03:07Z"}
+{"level":"info","msg":"Successfully added Helm repository jenkins-x-chartmuseum.\n","time":"2019-04-20T04:03:07Z"}
+{"level":"warning","msg":"No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080\n","time":"2019-04-20T04:03:07Z"}
+{"level":"info","msg":"Uploading chart file devopsnodejsapp-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts\n","time":"2019-04-20T04:03:07Z"}
+{"level":"info","msg":"Received 201 response: {\"saved\":true}\n","time":"2019-04-20T04:03:07Z"}
+Step: build-step-promote-**-promote:
+
+{"level":"warning","msg":"prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410","time":"2019-04-20T04:03:08Z"}
+{"level":"info","msg":"Promoting app devopsnodejsapp version 0.0.1 to namespace **-staging\n","time":"2019-04-20T04:03:08Z"}
+{"level":"info","msg":"Created Pull Request: https://github.com/*********/environment-warlockisland-staging/pull/1\n\n","time":"2019-04-20T04:03:14Z"}
+{"level":"warning","msg":"Failed to merge the Pull Request https://github.com/*********/environment-warlockisland-staging/pull/1 due to PUT https://api.github.com/repos/*********/environment-warlockisland-staging/pulls/1/merge: 405 Base branch was modified. Review and try the merge again. [] maybe I don't have karma?\n","time":"2019-04-20T04:04:00Z"}
+{"level":"info","msg":"Pull Request https://github.com/*********/environment-warlockisland-staging/pull/1 is merged at sha c6ccc9e5e5df27729a405037a71e78ce24afc2ae\n","time":"2019-04-20T04:04:20Z"}
+{"level":"info","msg":"Pull Request merged but we are not waiting for the update pipeline to complete!","time":"2019-04-20T04:04:20Z"}
+{"level":"warning","msg":"Could not find the service URL in namespace **-staging for names devopsnodejsapp, **-devopsnodejsapp, **-staging-devopsnodejsapp\n","time":"2019-04-20T04:04:20Z"}
