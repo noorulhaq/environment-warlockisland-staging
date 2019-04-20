@@ -1,0 +1,238 @@
+Step: build-step-credential-initializer-stb59:
+
+{"level":"warn","ts":1555753814.8032193,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1555753814.8042843,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: build-step-git-source-*********-devopspringapp-pr-1-s-z9n4k:
+
+{"level":"warn","ts":1555753817.9386103,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1555753819.3703947,"logger":"fallback-logger","caller":"git-init/main.go:99","msg":"Successfully cloned \"https://github.com/*********/devopspringapp\" @ \"926060abacf4d8ef37afce05ceccb4d95545f98a\" in path \"/workspace/source\""}
+Step: build-step-place-tools:
+
+Step: build-step-git-merge:
+
+Warning failed to load version: failed to parse version -dev+9e73adc0b: No Major.Minor.Patch elements found
+time="2019-04-20T09:51:44Z" level=info msg="got "
+Using SHAs from PULL_REFS=master:f66e05df7f0eb6fcee4bf96592e4d462cfbc45bf,1:926060abacf4d8ef37afce05ceccb4d95545f98a
+ran git fetch --unshallow origin 926060abacf4d8ef37afce05ceccb4d95545f98a: f66e05df7f0eb6fcee4bf96592e4d462cfbc45bf: in 
+ran git checkout master in 
+ran git reset --hard f66e05df7f0eb6fcee4bf96592e4d462cfbc45bf in 
+ran clean --force -d . in 
+ran git merge 926060abacf4d8ef37afce05ceccb4d95545f98a in 
+Step: build-step-build-set-version:
+
+Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Xms10m -Xmx192m
+OpenJDK 64-Bit Server VM warning: If the number of processors is expected to increase from one, then you should configure the number of parallel GC threads appropriately using -XX:ParallelGCThreads=N
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.example:devopspringapp >---------------------
+[INFO] Building demo 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- versions-maven-plugin:2.7:set (default-cli) @ devopspringapp ---
+[INFO] Searching for local aggregator root...
+[INFO] Local aggregation root: /workspace/source
+[INFO] Processing change of com.example:devopspringapp:0.0.1-SNAPSHOT -> 0.0.0-SNAPSHOT-PR-1-1
+[INFO] Processing com.example:devopspringapp
+[INFO]     Updating project com.example:devopspringapp
+[INFO]         from version 0.0.1-SNAPSHOT to 0.0.0-SNAPSHOT-PR-1-1
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 51.977 s
+[INFO] Finished at: 2019-04-20T09:52:50Z
+[INFO] ------------------------------------------------------------------------
+[0m[0m
+Step: build-step-build-mvn-install:
+
+Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Xms10m -Xmx192m
+OpenJDK 64-Bit Server VM warning: If the number of processors is expected to increase from one, then you should configure the number of parallel GC threads appropriately using -XX:ParallelGCThreads=N
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.example:devopspringapp >---------------------
+[INFO] Building demo 0.0.0-SNAPSHOT-PR-1-1
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ devopspringapp ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ devopspringapp ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- kotlin-maven-plugin:1.2.71:compile (compile) @ devopspringapp ---
+[INFO] Applied plugin: 'spring'
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ devopspringapp ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /workspace/source/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ devopspringapp ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- kotlin-maven-plugin:1.2.71:test-compile (test-compile) @ devopspringapp ---
+[WARNING] Source root doesn't exist: /workspace/source/target/generated-test-sources/test-annotations
+[INFO] Applied plugin: 'spring'
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M1:test (default-test) @ devopspringapp ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.devopspringapp.DemoApplicationTests
+09:53:16.393 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.example.devopspringapp.DemoApplicationTests]
+09:53:16.403 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+09:53:16.419 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+09:53:16.479 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.example.devopspringapp.DemoApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+09:53:16.497 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.devopspringapp.DemoApplicationTests], using SpringBootContextLoader
+09:53:16.504 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.devopspringapp.DemoApplicationTests]: class path resource [com/example/devopspringapp/DemoApplicationTests-context.xml] does not exist
+09:53:16.510 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.devopspringapp.DemoApplicationTests]: class path resource [com/example/devopspringapp/DemoApplicationTestsContext.groovy] does not exist
+09:53:16.511 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.devopspringapp.DemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+09:53:16.514 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.devopspringapp.DemoApplicationTests]: DemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+09:53:16.616 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.example.devopspringapp.DemoApplicationTests]
+09:53:16.804 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/workspace/source/target/classes/com/example/devopspringapp/DemoApplication.class]
+09:53:16.810 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.devopspringapp.DemoApplication for test class com.example.devopspringapp.DemoApplicationTests
+09:53:17.003 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.example.devopspringapp.DemoApplicationTests]: using defaults.
+09:53:17.004 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+09:53:17.026 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/TransactionDefinition]
+09:53:17.028 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+09:53:17.030 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4a94ee4, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4cc451f2, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6379eb, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@294425a7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@67d48005, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@9f116cc, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@12468a38, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1aa7ecca, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@59309333, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5876a9af]
+09:53:17.037 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.example.devopspringapp.DemoApplicationTests]
+09:53:17.039 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.example.devopspringapp.DemoApplicationTests]
+09:53:17.043 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.example.devopspringapp.DemoApplicationTests]
+09:53:17.044 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.example.devopspringapp.DemoApplicationTests]
+09:53:17.048 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.example.devopspringapp.DemoApplicationTests]
+09:53:17.049 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.example.devopspringapp.DemoApplicationTests]
+09:53:17.068 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@74fe5c40 testClass = DemoApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@3febb011 testClass = DemoApplicationTests, locations = '{}', classes = '{class com.example.devopspringapp.DemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3d921e20, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@1a1d6a08, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@12cdcf4, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@46daef40, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@462d5aee], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+09:53:17.069 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.example.devopspringapp.DemoApplicationTests]
+09:53:17.069 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.example.devopspringapp.DemoApplicationTests]
+09:53:17.121 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.4.RELEASE)
+
+2019-04-20 09:53:17.909  INFO 77 --- [           main] c.e.devopspringapp.DemoApplicationTests  : Starting DemoApplicationTests on *********-devopspringapp-pr-1-s-1-from-build-pack-z4h8z-pod-a05 with PID 77 (started by root in /workspace/source)
+2019-04-20 09:53:17.919  INFO 77 --- [           main] c.e.devopspringapp.DemoApplicationTests  : No active profile set, falling back to default profiles: default
+2019-04-20 09:53:24.171  INFO 77 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-20 09:53:26.676  INFO 77 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-04-20 09:53:26.854  INFO 77 --- [           main] c.e.devopspringapp.DemoApplicationTests  : Started DemoApplicationTests in 9.715 seconds (JVM running for 11.301)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.049 s - in com.example.devopspringapp.DemoApplicationTests
+2019-04-20 09:53:27.283  INFO 77 --- [       Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.1:jar (default-jar) @ devopspringapp ---
+[INFO] Building jar: /workspace/source/target/devopspringapp-0.0.0-SNAPSHOT-PR-1-1.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.1.4.RELEASE:repackage (repackage) @ devopspringapp ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ devopspringapp ---
+[INFO] Installing /workspace/source/target/devopspringapp-0.0.0-SNAPSHOT-PR-1-1.jar to /root/.mvnrepository/com/example/devopspringapp/0.0.0-SNAPSHOT-PR-1-1/devopspringapp-0.0.0-SNAPSHOT-PR-1-1.jar
+[INFO] Installing /workspace/source/pom.xml to /root/.mvnrepository/com/example/devopspringapp/0.0.0-SNAPSHOT-PR-1-1/devopspringapp-0.0.0-SNAPSHOT-PR-1-1.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 36.409 s
+[INFO] Finished at: 2019-04-20T09:53:29Z
+[INFO] ------------------------------------------------------------------------
+Step: build-step-build-skaffold-version:
+
+v0.26.0
+Step: build-step-build-container-build:
+
+[36mINFO[0m[0000] Downloading base image openjdk:8-jdk-slim    
+ERROR: logging before flag.Parse: E0420 09:53:36.172771       9 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+ERROR: logging before flag.Parse: E0420 09:53:36.197355       9 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+2019/04/20 09:53:36 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0002] Error while retrieving image from cache: getting file info: stat /workspace/sha256:5b775869f9de8083dac219760c64ced22d0b6c31545244b1ef63837e5a9c5507: no such file or directory 
+[36mINFO[0m[0002] Downloading base image openjdk:8-jdk-slim    
+2019/04/20 09:53:38 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0004] cmd: EXPOSE                                  
+[36mINFO[0m[0004] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0004] Using files from context: [/workspace/source/pom.xml] 
+[36mINFO[0m[0004] Using files from context: [/workspace/source/target/devopspringapp-0.0.0-SNAPSHOT-PR-1-1.jar] 
+[36mINFO[0m[0004] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0004] Taking snapshot of full filesystem...        
+[36mINFO[0m[0004] ENV PORT 8080                                
+[36mINFO[0m[0004] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0004] ENV CLASSPATH /opt/lib                       
+[36mINFO[0m[0004] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0004] EXPOSE 8080                                  
+[36mINFO[0m[0004] cmd: EXPOSE                                  
+[36mINFO[0m[0004] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0004] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0004] Using files from context: [/workspace/source/pom.xml] 
+[36mINFO[0m[0004] COPY pom.xml target/lib* /opt/lib/           
+[36mINFO[0m[0004] Taking snapshot of files...                  
+[36mINFO[0m[0004] Using files from context: [/workspace/source/target/devopspringapp-0.0.0-SNAPSHOT-PR-1-1.jar] 
+[36mINFO[0m[0004] COPY target/*.jar /opt/app.jar               
+[36mINFO[0m[0004] Taking snapshot of files...                  
+[36mINFO[0m[0004] WORKDIR /opt                                 
+[36mINFO[0m[0004] cmd: workdir                                 
+[36mINFO[0m[0004] Changed working directory to /opt            
+[36mINFO[0m[0004] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0004] CMD ["java", "-XX:+UnlockExperimentalVMOptions", "-XX:+UseCGroupMemoryLimitForHeap", "-jar", "app.jar"] 
+[36mINFO[0m[0004] No files changed in this command, skipping snapshotting. 
+2019/04/20 09:53:41 existing blob: sha256:9b053055f644af725a07611b2e29b1d9aa52bf8bd04db344ca086794cbe523cb
+2019/04/20 09:53:41 existing blob: sha256:1c80aca6b8ec87a87c2200276a5e098ed72ca708e8befa0b8951e019be98a90c
+2019/04/20 09:53:41 existing blob: sha256:27833a3ba0a545deda33bb01eaf95a14d05d43bf30bce9267d92d17f069fe897
+2019/04/20 09:53:41 existing blob: sha256:16d944e3d00df7bedd2f9a6aa678132a1fb785f7d56b16fdf24c22d5c7c3b7a1
+2019/04/20 09:53:41 existing blob: sha256:9019de9fce5f74bfb1abcbec71bbcb5c81916617cc4697889772607263281abc
+2019/04/20 09:53:41 pushed blob: sha256:8578c0f48f87ad6b9dd8af3a22920a20b56e0b6c48bd31926775acadcbc09c02
+2019/04/20 09:53:41 pushed blob: sha256:2d768158e3dd55dee3824f0ce46d9f3d1af7373157522fe2dc61b8c8ff69b8a5
+2019/04/20 09:53:41 pushed blob: sha256:603f05ef41888c55836895859c6f8454d2bf420eb301adf1d707534fd1ad77b6
+2019/04/20 09:53:41 10.11.247.124:5000/*********/devopspringapp:0.0.0-SNAPSHOT-PR-1-1: digest: sha256:c985fb7a810bfa839f0de9810ed88dfe4e7698892984f368a6326d8ae10d1116 size: 1403
+Step: build-step-postbuild-post-build:
+
+{"level":"info","msg":"no CVE provider running in the current ** namespace so skip adding image to be analysed","time":"2019-04-20T09:53:42Z"}
+Step: build-step-promote-make-preview:
+
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-1-1/" Chart.yaml
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-1-1/" ../*/Chart.yaml
+sed -i -e "s|repository:.*|repository: 10.11.247.124:5000\/*********\/devopspringapp|" values.yaml
+sed -i -e "s/tag:.*/tag: 0.0.0-SNAPSHOT-PR-1-1/" values.yaml
+echo "  version: 0.0.0-SNAPSHOT-PR-1-1" >> requirements.yaml
+** step helm build
+{"level":"warning","msg":"No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080\n","time":"2019-04-20T09:53:44Z"}
+{"level":"info","msg":"Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io\n","time":"2019-04-20T09:53:46Z"}
+{"level":"info","msg":"Successfully added Helm repository chartmuseum.jenkins-x.io.\n","time":"2019-04-20T09:53:47Z"}
+{"level":"info","msg":"Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080\n","time":"2019-04-20T09:53:47Z"}
+{"level":"info","msg":"Successfully added Helm repository jenkins-x-chartmuseum.\n","time":"2019-04-20T09:53:47Z"}
+Step: build-step-promote-**-preview:
+
+{"level":"info","msg":"Creating a preview","time":"2019-04-20T09:53:58Z"}
+{"level":"warning","msg":"No author for commit: 926060abacf4d8ef37afce05ceccb4d95545f98a\n","time":"2019-04-20T09:54:00Z"}
+{"level":"info","msg":"Created environment *********-devopspringapp-pr-1\n","time":"2019-04-20T09:54:01Z"}
+{"level":"info","msg":"Namespace **-*********-devopspringapp-pr-1 created \n ","time":"2019-04-20T09:54:01Z"}
+{"level":"info","msg":"expose:\n  Annotations:\n    helm.sh/hook: post-install,post-upgrade\n    helm.sh/hook-delete-policy: hook-succeeded\n  config:\n    domain: 35.201.134.172.nip.io\n    exposer: Ingress\n    http: \"true\"\npreview:\n  image:\n    repository: 10.11.247.124:5000/*********/devopspringapp\n    tag: 0.0.0-SNAPSHOT-PR-1-1\n","time":"2019-04-20T09:54:01Z"}
+{"level":"info","msg":"Deleting and cloning the Jenkins X versions repo","time":"2019-04-20T09:54:02Z"}
+{"level":"info","msg":"Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions\n","time":"2019-04-20T09:54:02Z"}
+Enumerating objects: 117, done.
+Counting objects:   0% (1/117)   Counting objects:   1% (2/117)   Counting objects:   2% (3/117)   Counting objects:   3% (4/117)   Counting objects:   4% (5/117)   Counting objects:   5% (6/117)   Counting objects:   6% (8/117)   Counting objects:   7% (9/117)   Counting objects:   8% (10/117)   Counting objects:   9% (11/117)   Counting objects:  10% (12/117)   Counting objects:  11% (13/117)   Counting objects:  12% (15/117)   Counting objects:  13% (16/117)   Counting objects:  14% (17/117)   Counting objects:  15% (18/117)   Counting objects:  16% (19/117)   Counting objects:  17% (20/117)   Counting objects:  18% (22/117)   Counting objects:  19% (23/117)   Counting objects:  20% (24/117)   Counting objects:  21% (25/117)   Counting objects:  22% (26/117)   Counting objects:  23% (27/117)   Counting objects:  24% (29/117)   Counting objects:  25% (30/117)   Counting objects:  26% (31/117)   Counting objects:  27% (32/117)   Counting objects:  28% (33/117)   Counting objects:  29% (34/117)   Counting objects:  30% (36/117)   Counting objects:  31% (37/117)   Counting objects:  32% (38/117)   Counting objects:  33% (39/117)   Counting objects:  34% (40/117)   Counting objects:  35% (41/117)   Counting objects:  36% (43/117)   Counting objects:  37% (44/117)   Counting objects:  38% (45/117)   Counting objects:  39% (46/117)   Counting objects:  40% (47/117)   Counting objects:  41% (48/117)   Counting objects:  42% (50/117)   Counting objects:  43% (51/117)   Counting objects:  44% (52/117)   Counting objects:  45% (53/117)   Counting objects:  46% (54/117)   Counting objects:  47% (55/117)   Counting objects:  48% (57/117)   Counting objects:  49% (58/117)   Counting objects:  50% (59/117)   Counting objects:  51% (60/117)   Counting objects:  52% (61/117)   Counting objects:  53% (63/117)   Counting objects:  54% (64/117)   Counting objects:  55% (65/117)   Counting objects:  56% (66/117)   Counting objects:  57% (67/117)   Counting objects:  58% (68/117)   Counting objects:  59% (70/117)   Counting objects:  60% (71/117)   Counting objects:  61% (72/117)   Counting objects:  62% (73/117)   Counting objects:  63% (74/117)   Counting objects:  64% (75/117)   Counting objects:  65% (77/117)   Counting objects:  66% (78/117)   Counting objects:  67% (79/117)   Counting objects:  68% (80/117)   Counting objects:  69% (81/117)   Counting objects:  70% (82/117)   Counting objects:  71% (84/117)   Counting objects:  72% (85/117)   Counting objects:  73% (86/117)   Counting objects:  74% (87/117)   Counting objects:  75% (88/117)   Counting objects:  76% (89/117)   Counting objects:  77% (91/117)   Counting objects:  78% (92/117)   Counting objects:  79% (93/117)   Counting objects:  80% (94/117)   Counting objects:  81% (95/117)   Counting objects:  82% (96/117)   Counting objects:  83% (98/117)   Counting objects:  84% (99/117)   Counting objects:  85% (100/117)   Counting objects:  86% (101/117)   Counting objects:  87% (102/117)   Counting objects:  88% (103/117)   Counting objects:  89% (105/117)   Counting objects:  90% (106/117)   Counting objects:  91% (107/117)   Counting objects:  92% (108/117)   Counting objects:  93% (109/117)   Counting objects:  94% (110/117)   Counting objects:  95% (112/117)   Counting objects:  96% (113/117)   Counting objects:  97% (114/117)   Counting objects:  98% (115/117)   Counting objects:  99% (116/117)   Counting objects: 100% (117/117)   Counting objects: 100% (117/117), done.
+Compressing objects:   1% (1/57)   Compressing objects:   3% (2/57)   Compressing objects:   5% (3/57)   Compressing objects:   7% (4/57)   Compressing objects:   8% (5/57)   Compressing objects:  10% (6/57)   Compressing objects:  12% (7/57)   Compressing objects:  14% (8/57)   Compressing objects:  15% (9/57)   Compressing objects:  17% (10/57)   Compressing objects:  19% (11/57)   Compressing objects:  21% (12/57)   Compressing objects:  22% (13/57)   Compressing objects:  24% (14/57)   Compressing objects:  26% (15/57)   Compressing objects:  28% (16/57)   Compressing objects:  29% (17/57)   Compressing objects:  31% (18/57)   Compressing objects:  33% (19/57)   Compressing objects:  35% (20/57)   Compressing objects:  36% (21/57)   Compressing objects:  38% (22/57)   Compressing objects:  40% (23/57)   Compressing objects:  42% (24/57)   Compressing objects:  43% (25/57)   Compressing objects:  45% (26/57)   Compressing objects:  47% (27/57)   Compressing objects:  49% (28/57)   Compressing objects:  50% (29/57)   Compressing objects:  52% (30/57)   Compressing objects:  54% (31/57)   Compressing objects:  56% (32/57)   Compressing objects:  57% (33/57)   Compressing objects:  59% (34/57)   Compressing objects:  61% (35/57)   Compressing objects:  63% (36/57)   Compressing objects:  64% (37/57)   Compressing objects:  66% (38/57)   Compressing objects:  68% (39/57)   Compressing objects:  70% (40/57)   Compressing objects:  71% (41/57)   Compressing objects:  73% (42/57)   Compressing objects:  75% (43/57)   Compressing objects:  77% (44/57)   Compressing objects:  78% (45/57)   Compressing objects:  80% (46/57)   Compressing objects:  82% (47/57)   Compressing objects:  84% (48/57)   Compressing objects:  85% (49/57)   Compressing objects:  87% (50/57)   Compressing objects:  89% (51/57)   Compressing objects:  91% (52/57)   Compressing objects:  92% (53/57)   Compressing objects:  94% (54/57)   Compressing objects:  96% (55/57)   Compressing objects:  98% (56/57)   Compressing objects: 100% (57/57)   Compressing objects: 100% (57/57), done.
+Total 1010 (delta 55), reused 108 (delta 51), pack-reused 893
+{"level":"warning","msg":"could not find a stable version from charts of . from /builder/home/.**/jenkins-x-versions\nFor background see: https://jenkins-x.io/architecture/version-stream/\n","time":"2019-04-20T09:54:05Z"}
+{"level":"info","msg":"Please lock this version down via the command: ** step create version pr -k charts -n .\n\n","time":"2019-04-20T09:54:05Z"}
+{"level":"info","msg":"Applying generated chart . YAML via kubectl in dir: /tmp/helm-template-workdir-113652736/preview/output\n","time":"2019-04-20T09:54:05Z"}
+{"level":"info","msg":"role.rbac.authorization.k8s.io/cleanup created\nrolebinding.rbac.authorization.k8s.io/cleanup created\nserviceaccount/cleanup created\nconfigmap/exposecontroller created\nrole.rbac.authorization.k8s.io/expose created\nrolebinding.rbac.authorization.k8s.io/expose created\nserviceaccount/expose created\ndeployment.extensions/preview-preview created\nservice/devopspringapp created\n","time":"2019-04-20T09:54:07Z"}
+{"level":"info","msg":"\n","time":"2019-04-20T09:54:07Z"}
+{"level":"info","msg":"Applying Helm hook post-upgrade YAML via kubectl in file: /tmp/helm-template-workdir-113652736/preview/helmHooks/preview/charts/expose/templates/job.yaml\n","time":"2019-04-20T09:54:07Z"}
+{"level":"info","msg":"job.batch/expose created\n","time":"2019-04-20T09:54:07Z"}
+{"level":"info","msg":"\n","time":"2019-04-20T09:54:07Z"}
+{"level":"info","msg":"Waiting for helm post-upgrade hook Job expose to complete before removing it\n","time":"2019-04-20T09:54:07Z"}
+{"level":"info","msg":"Deleting helm hook sources from file: /tmp/helm-template-workdir-113652736/preview/helmHooks/preview/charts/expose/templates/job.yaml\n","time":"2019-04-20T09:54:14Z"}
+{"level":"info","msg":"job.batch \"expose\" deleted\n","time":"2019-04-20T09:54:15Z"}
+{"level":"info","msg":"Removing Kubernetes resources from older releases using selector: jenkins.io/chart-release=preview,jenkins.io/version!=0.0.0-SNAPSHOT-PR-1-1 from all pvc configmap release sa role rolebinding secret\n","time":"2019-04-20T09:54:15Z"}
+{"level":"info","msg":"Removing Kubernetes resources from older releases using selector: jenkins.io/chart-release=preview,jenkins.io/version!=0.0.0-SNAPSHOT-PR-1-1,jenkins.io/namespace=**-*********-devopspringapp-pr-1 from clusterrole clusterrolebinding\n","time":"2019-04-20T09:54:16Z"}
+{"level":"info","msg":"Updating PipelineActivities *********-devopspringapp-pr-1-1 which has status Running\n","time":"2019-04-20T09:54:16Z"}
+{"level":"info","msg":"Preview application is now available at: http://devopspringapp.**-*********-devopspringapp-pr-1.35.201.134.172.nip.io\n\n","time":"2019-04-20T09:54:16Z"}
